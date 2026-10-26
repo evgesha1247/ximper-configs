@@ -1,0 +1,151 @@
+ {
+   "modules-right": [
+       "group/volume",     
+        "group/bat",         
+        "group/net",          
+        "hyprland/language",
+        "group/time"  
+  ],
+
+
+
+///////////////////////// -- З В У К -- /////////////////////////////// 
+"group/volume": {
+    "orientation": "horizontal",
+    "modules": [
+        "pulseaudio#icon" , 
+        "custom/volume", 
+        "pulseaudio#value"      
+     ]
+},
+
+    "custom/volume": {
+        "exec": "~/.config/waybar/scripts/volume-ui.sh render",
+        "signal": 8,
+        "format": "{}",
+        "escape": false
+    },
+ 
+    "pulseaudio#icon": {
+        "format": "{icon}",
+        "format-icons": {
+            "headphone": "󰋋",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "scroll-step": 5,
+        "tooltip": false, 
+    },
+
+    "pulseaudio#value": {
+        "format": "{volume}%",
+        "scroll-step": 5,
+        "tooltip": false,
+     },
+
+
+///////////////////////// -- З А Р Я Д --///////////////////////////////   
+
+"group/bat": {
+    "orientation": "horizontal",
+    "modules": [
+        "battery#icon",      // 1. иконка
+        "battery#value"      // 2. проценты
+    ]
+},
+
+    "battery#icon": {
+        "format": "{icon}",
+        "format-icons": [
+            "󰁺",   // 0-19%   разряжен
+            "󰁼",   // 20-39%
+            "󰁾",   // 40-59%
+            "󰂂",   // 60-89%
+            "󰁹"    // 90-100% полный
+         ],
+        "format-charging": "󰂄",
+        "format-full": "󰁹",
+        "tooltip": false
+    },
+
+    "battery#value": {
+        "format": "{capacity}%",
+        "full-at": 98,
+        "tooltip": false
+    },
+
+
+
+///////////////////////// -- WI-FI -- ///////////////////////////////   
+"group/net": {
+ "orientation": "inherit",   
+  "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": true,
+    },
+    "modules": [
+        "tray" , 
+        "custom/net-sep",
+        "network#value"      // 2. что показывает: имя сети и/или трафик
+    ]
+},
+     "tray": {
+         "icon-size": 18,
+         "spacing": 6 
+      },
+
+      "custom/net-sep": {
+         "format": "│",
+         "tooltip": false
+      },
+"network#value": {
+   "format-wifi": "{essid}",
+   "format-ethernet": "LAN",
+   "format-disconnected": "—",
+   "tooltip": true,
+   "tooltip-format": "{ifname}: {ipaddr}/{cidr}\nСигнал: {signalStrength}%" , 
+   "on-click": "nm-connection-editor"  , 
+} , 
+
+
+
+///////////////////////// -- Я З Ы К --	///////////////////////////////   
+ "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ru": "RU",
+        "on-click": "hyprctl switchxkblayout current next",
+        "tooltip-format": "{}",
+        "tooltip": true
+    } , 
+
+
+
+///////////////////////// -- В Р Е М Я -- ///////////////////////////////   
+"group/time": {
+    "orientation": "horizontal",
+    "modules": [
+        "clock#icon",       // 1. иконка часов
+        "clock#value",      // 2. время
+        "clock#period"      // 3. AM/PM
+    ]
+},
+
+// Экземпляр 1: только иконка
+"clock#icon": {
+    "format": "󰥔",
+    "tooltip": false
+},
+ 
+"clock#value": {
+    "format": "{:%I:%M}",
+    "tooltip": true,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+},
+
+// Экземпляр 3: только период
+"clock#period": {
+    "format": "{:%p}",
+    "tooltip": false
+}
+
+}  

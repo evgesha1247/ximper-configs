@@ -1,0 +1,34 @@
+{
+    "layer": "top",                  // слой: top — поверх окон (под фуллскрином), bottom — под окнами
+    "position": "top",               // сторона экрана: "top" | "bottom" | "left" | "right"
+    "height": 26,                    // высота в px (для left/right — это будет ширина)
+    "width": 0,                      // ширина: 0 = авто (вся строка экрана)
+
+    "margin-top": 0,                 // отступы от краёв экрана — бар «парит» отдельно
+    "margin-left": 8,
+    "margin-right": 8,
+    "margin-bottom": 0,
+
+    "spacing": 8,                    // зазор между модулями внутри бара, в px
+
+    "exclusive": true,               // резервировать место под бар: окна Hyprland не наезжают на него
+    "fixed-center": true,            // центральный блок держится строго по центру ЭКРАНА,
+                                     // а не по центру свободного места между left и right
+    "passthrough": false,            // true — клики проходят сквозь бар на окно (для оверлеев, нам не надо)
+    "gtk-layer-shell": true,         // рендер через gtk-layer-shell (не трогать без нужды — legacy-опция)
+
+    "ipc": false,                     // вкл. IPC: другим программам (hyprland, скрипты) можно
+                                     // посылать бару команды — например, сворачивать его
+
+    "start_hidden": false,           // запускать скрытым (показать можно по IPC)
+
+
+    "reload_style_on_change": true,  // МАСТХЭВ: менять style.css — бар перечитает его сам,
+
+    "include": [
+        "modules/right.jsonc",
+        "modules/center.jsonc",
+        "modules/left.jsonc",
+    ],
+
+}

@@ -1,0 +1,42 @@
+/* ============================================================
+   ВОРСПЕЙСЫ: контейнер + кнопки состояний
+   Классы Waybar: .active .empty .persistent .visible .special .urgent
+   ============================================================ */
+
+/* База: размер задаёт высоту пилюли, рамка — окантовка и запас под кольцо */
+#workspaces button {
+    min-height: 22px;
+    min-width: 22px;
+    font-size: 18px ; 
+  
+    padding : 0px ; 
+    margin: 0px 8px ;
+
+    border: 1px solid @border;
+    border-radius: 9999px;
+    
+    color: alpha(@text, 0.6);
+    background: @bg_pill;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Пустая persistent — приглушённая */
+#workspaces button.empty {
+    background: @bg_disable;
+    color: alpha(@text, 0.3);
+}
+
+/* Активная — кольцо + свечение */
+#workspaces button.active {
+    color: @accent;
+    border-color: @accent;
+    background: alpha(@accent, 0.12);
+    text-shadow: 0 0 8px alpha(@accent, 0.9);
+}
+
+/* Наведение на неактивную */
+#workspaces button:hover {
+    color: @text;
+    background: alpha(@accent, 0.12);
+}
+

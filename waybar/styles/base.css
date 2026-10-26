@@ -1,0 +1,28 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace; /* нужен для иконок 󰮯/󰊠 */
+}
+/* Само окно бара */
+window#waybar {
+    background:  transparent;
+}
+
+/* ============================================================
+   КАРКАС КАПСУЛ
+   Общий костюм всех капсул бара.
+   ============================================================ */
+
+#workspaces, 
+#custom-cava, 
+#volume,
+#bat,
+#net,
+#language,
+#time {
+    background: @bg_pill;
+    border: 1px solid @border;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0 10px;
+    color: @text;                         
+    font-weight: 600;
+}  

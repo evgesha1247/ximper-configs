@@ -1,0 +1,8 @@
+splash = false
+splash_color = rgb(D8E2EA)
+
+wallpaper {
+    monitor =
+#    path = /usr/share/wallpapers/ximper/44.png
+     path = /home/evg/Изображения/my_wallpapers/one.png
+}
