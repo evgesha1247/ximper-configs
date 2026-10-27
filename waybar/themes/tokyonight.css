@@ -1,0 +1,6 @@
+/* Tokyo Night — тема waybar */
+@define-color accent            #7aa2f7;   /* синий — основной акцент */
+@define-color text              #c0caf5;   /* основной текст */
+@define-color bg_pill           rgba(65, 72, 104, 0.35);  /* капсулы:东京-ночь #414868 с прозрачностью */
+@define-color bg_disable        rgba(26, 27, 38, 0.75);   /* фон пустых воркспейсов #1a1b26 */
+@define-color border            rgba(65, 72, 104, 0.60);  /* обводка капсул */

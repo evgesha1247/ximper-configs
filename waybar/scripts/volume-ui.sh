@@ -1,17 +1,17 @@
 #!/bin/bash
 
-BAR='waybar.*waybar/config'          # шаблон командной строки основного бара
+BAR='waybar'
 STAMP="${XDG_RUNTIME_DIR:-/tmp}/vol-ui.stamp"
-HIDE_AFTER=1                          # секунд тишины до исчезновения OSD
+HIDE_AFTER=1
 SEGS=80                               # длина дорожки в сегментах
 
 # Цвета полоски — подставьте свои:
-ACCENT='#89b4fa'    # залитая часть
-DIM='#45475a'       # «пустая» часть
+ACCENT='#7aa2f7'    # залитая часть
+DIM='#292e42'       # «пустая» часть
 
 signal_bar() {
     local pids
-    pids=$(pgrep -f "$BAR") || return
+    pids=$(pgrep -x "$BAR") || return
     [ -n "$pids" ] || return
     kill -42 $pids   # RTMIN+8 -> перерисовать полоску
 }

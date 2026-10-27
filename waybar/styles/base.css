@@ -26,3 +26,9 @@ window#waybar {
     color: @text;                         
     font-weight: 600;
 }  
+tooltip {
+    background: rgba(26, 27, 38, 0.95);
+    border: 1px solid rgba(65, 72, 104, 0.6);
+    border-radius: 10px;
+    color: #c0caf5;
+}
