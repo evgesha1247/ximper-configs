@@ -22,7 +22,9 @@ alias -g  nano='nano --zap '
 alias ls='eza --icons=auto --group-directories-first'
 alias ll='eza -la --icons=auto --group-directories-first --git'
 alias lt='eza -T --icons=auto --level=2'
-
+# свежее сверху:
+alias la='eza -la --icons=auto --group-directories-first --sort=modified --reverse'
+alias lnew='eza -1 --icons=auto --sort=modified --reverse | head'
 # source $ZSH/oh-my-zsh.sh
 
 export "MICRO_TRUECOLOR=1"
