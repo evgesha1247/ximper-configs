@@ -1,8 +1,31 @@
-# По умолчанию игнорируем всё
-/*
-# Разрешаем репозиторий самого git-конфига
-!/.gitignore
-# Наши темы-оверлеи
-!/hypr/
-!/kitty/
-!/waybar/
+# --- мусор и временные файлы ---
+*.swp
+*.swo
+*~
+.cache/
+*.log
+*.bak
+*.tmp
+
+# --- секреты и пароли ---
+credentials*
+*.pem
+*.key
+id_rsa*
+.secrets*
+.env
+*token*
+*password*
+
+# --- системное, что не должно жить в репо ---
+.kitty_sessions/
+zoxide/
+persistence/
+recently-used*
+.gtk-bookmarks
+.nextcloud*
+# --- тяжёлое / бинарное ---
+*.so
+*.o
+*.tar.gz
+*.zip

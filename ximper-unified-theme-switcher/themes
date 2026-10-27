@@ -1,0 +1,5 @@
+KV_LIGHT_THEME=KvSimplicityDarkLight
+KV_DARK_THEME=KvGnomeDark
+GTK3_LIGHT_THEME=Gruvbox-Light
+GTK3_DARK_THEME=Gruvbox-BL-LB-Dark
+CURRENT_THEME=prefer-dark
