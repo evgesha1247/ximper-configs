@@ -1,0 +1,5 @@
+[Default]
+save_dir="$(xdg-user-dir PICTURES)/Снимки экрана"
+save_filename_format=снимок-%Y%m%d-%H%M%S.png
+show_panel=true
+auto_save=true

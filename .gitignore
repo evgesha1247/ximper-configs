@@ -29,3 +29,7 @@ recently-used*
 *.o
 *.tar.gz
 *.zip
+goa-1.0/
+procps/
+kate/lspclient/
+ranger/plugins/

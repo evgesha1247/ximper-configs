@@ -1,0 +1,61 @@
+window {
+    margin: 1px;
+    border: none;
+    border-radius: 15px;
+}
+
+#input {
+    margin: 5px;
+    color: #c0caf5;
+    border-radius: 13px;
+    background-color: #1a1b26;
+}
+
+#inner-box {
+    margin: 5px;
+    background-color: #0B0E1D;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#outer-box {
+    margin: 0px;
+    padding: 10px;
+    background-color: #0B0E1D;
+    border-radius: 15px;
+}
+
+/* шрифт как во всей системе */
+#text {
+    margin: 5px;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+    color: #c0caf5;
+}
+
+/* приглушённые пункты, которые не подошли под поиск */
+#entry {
+    border-radius: 13px;
+}
+
+#entry:active, #entry:disabled {
+    color: #565f89;
+}
+
+#entry:selected {
+    background-color: #29394f;
+    border-radius: 13px;
+    border: 0.8px solid #bb9af7;
+}
+
+#entry:selected * {
+    background-color: #29394f;
+    color: #7aa2f7;
+}
+
+#text:selected {
+    text-decoration-color: #a9b1d6;
+}

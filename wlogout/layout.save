@@ -1,0 +1,34 @@
+q{
+    "label" : "lock",
+    "action" : "gtklock",
+    "text": "Заблокировать",
+    "keybind" : "l"
+}
+
+{
+    "label" : "hibernate",
+    "action" : "systemctl hibernate",
+    "text": "Гибернация",
+    "keybind" : "h"
+}
+
+{
+    "label" : "logout",
+    "action" : "killall -u $USER",
+    "text": "     Выйти     ",
+    "keybind" : "e"
+}
+
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "text": "Выключение",
+    "keybind" : "s"
+}
+
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text": "Перезагрузка",
+    "keybind" : "r"
+}

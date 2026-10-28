@@ -1,0 +1,50 @@
+window {
+        font-size: 15pt;
+        color: #c0caf5;
+        background-color: rgba(26, 27, 38, 0.6);   /* #1a1b26 вместо #0c0c0c */
+}
+
+button {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20%;
+        background-color: transparent;
+        transition: all 0.3s ease-in;
+        box-shadow: 0 0 10px 2px transparent;
+        border-radius: 24px;
+        margin: 10px;
+}
+
+button:focus {
+        background-size: 50%;
+        border: 2px solid #7aa2f7;                 /* акцент вместо серого */
+        color: transparent;
+        transition: all 0.4s cubic-bezier(0.55, 0, 0.28, 1.682), box-shadow 1s ease-in;
+}
+
+button:hover {
+        background-size: 50%;
+        border: 2px solid #7aa2f7;
+        color: transparent;
+        transition: all 0.4s cubic-bezier(0.55, 0, 0.28, 1.682), box-shadow 1s ease-in;
+}
+
+#shutdown {
+	background-image: image(url("/home/evg/.config/wlogout/icons/power.png"));
+}
+
+#logout {
+	background-image: image(url("/home/evg/.config/wlogout/icons/logout.png"));
+}
+
+#reboot {
+	background-image: image(url("/home/evg/.config/wlogout/icons/restart.png"));
+}
+
+#lock {
+	background-image: image(url("/home/evg/.config/wlogout/icons/lock.png"));
+}
+
+#hibernate {
+	background-image: image(url("/home/evg/.config/wlogout/icons/hibernate.png"));
+}
