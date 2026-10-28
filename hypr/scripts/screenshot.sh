@@ -8,7 +8,7 @@ LOG="$HOME/.config/hypr/scripts/screenshot.log"
 if hyprshot -m region -z --raw > "$f"; then
     echo "$(date +%H:%M:%S) ok" >> "$LOG"
     wl-copy < "$f"
-    notify-send -t 2000 -i "$f" "Скриншот" "В буфере и в $f"
+    notify-send -a "Скриншоты" -t 4000 -i "$f" "Скриншот" "В буфере,\n$d"
 else
     echo "$(date +%H:%M:%S) fail (код $?)" >> "$LOG"
     rm -f "$f"

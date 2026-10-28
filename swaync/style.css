@@ -1,0 +1,192 @@
+/* ============================================================
+   SWAYNC — Tokyo Night
+   Зоны: 1. Палитра  2. Слои  3. Всплывающие уведомления
+         4. Панель (центр управления)  5. Карточка уведомления
+         6. Виджеты панели  7. Плеер (mpris)
+   ============================================================ */
+
+/* ---------- 1. ПАЛИТРА (меняются только здесь) ---------- */
+:root {
+  --bg: #1a1b26;              /* основной фон */
+  --bg-card: #24283b;         /* фон карточек */
+  --bg-widget: #29394f;       /* плашки виджетов, выделение */
+  --text: #c0caf5;            /* основной текст */
+  --text-dim: #565f89;        /* приглушённый текст, время */
+  --accent: #7aa2f7;          /* акцент (синий) */
+  --accent-2: #bb9af7;        /* акцент второй (фиолетовый) */
+  --danger: #f7768e;          /* критические уведомления */
+
+  --noti-bg-alpha: 0.75;      /* прозрачность карточки уведомления */
+  --cc-bg-alpha: 0.85;        /* прозрачность панели */
+  --radius: 10px;             /* единое скругление */
+  --border: rgba(65, 72, 104, 0.60);
+
+  /* hover/focus = цвет карточки: подсветка визуально отсутствует,
+     соседние элементы не затронуты */
+  --noti-bg-hover: rgba(36, 40, 59, 0.75);
+  --noti-bg-focus: rgba(36, 40, 59, 0.75);
+  --noti-close-bg-hover: var(--bg-widget);
+  --hover-tranistion: none;   /* так в системной теме, опечатка там */
+  --hover-transition: none;
+}
+
+/* ---------- 2. СЛОИ (фон окон — всегда прозрачный,
+              иначе ломается blur из layerrule) ---------- */
+.notificationwindow,
+.blankwindow {
+  background: transparent;
+}
+
+/* ---------- 3. ВСПЛЫВАЮЩИЕ УВЕДОМЛЕНИЯ ---------- */
+.floating-notifications {
+  background: transparent;
+}
+
+.floating-notifications .notification {
+  margin: 0px -6px 0px 0px;  /* верх = высота waybar + зазор */
+  padding: 5px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(36, 40, 59, var(--noti-bg-alpha));
+  box-shadow: none;
+}
+
+/* ---------- 4. ПАНЕЛЬ (ЦЕНТР УПРАВЛЕНИЯ) ---------- */
+.control-center {
+  background: rgba(26, 27, 38, var(--cc-bg-alpha));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  margin: 4px 6px 0 0;
+}
+
+.control-center-list-placeholder {
+  color: var(--text-dim);
+}
+
+/* ---------- 5. КАРТОЧКА УВЕДОМЛЕНИЯ (общая база:
+              действует и во всплывашках, и в панели) ---------- */
+.notification {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  background: rgba(36, 40, 59, var(--noti-bg-alpha));
+}
+
+.notification-row {
+  background: transparent;
+}
+
+.notification.critical {
+  outline: 1px solid var(--danger);
+}
+
+.summary {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.time {
+  color: var(--text-dim);
+}
+
+.body {
+  color: var(--text);
+}
+
+.close-button {
+  border-radius: 8px;
+  background: var(--bg-widget);
+  color: var(--text);
+}
+
+.notification-action > button {
+  border-radius: 8px;
+  background: var(--bg-widget);
+  color: var(--text);
+}
+
+.notification-action > button:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* кликабельная область карточки: без собственной заливки и реакций,
+   фон виден от .notification (специичность = системной теме) */
+.notification-row .notification-background .notification .notification-default-action,
+.notification-row .notification-background .notification .notification-default-action:hover,
+.notification-row .notification-background .notification .notification-default-action:focus,
+.notification-row .notification-background .notification .notification-default-action:active,
+.notification-row .notification-background .notification .notification-action:hover {
+  background: transparent;
+  transition: none;
+}
+
+.notification-row .notification-background .notification .notification-default-action {
+  border: none;
+  box-shadow: none;
+}
+
+.notification-group:focus{
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* ---------- 6. ВИДЖЕТЫ ПАНЕЛИ ---------- */
+.widget {
+  padding: 6px;
+  border-radius: var(--radius);
+}
+
+.widget-title {
+  color: var(--text);
+  font-size: 1.2em;
+}
+
+.widget-title > button {
+  border-radius: 8px;
+  background: var(--bg-widget);
+  color: var(--text);
+}
+
+/* ---------- 7. ПЛЕЕР (MPRIS) ---------- */
+.widget-mpris,
+.widget-mpris * {
+  border-radius: var(--radius);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.widget-mpris-player {
+  border-radius: var(--radius);
+}
+
+.mpris-background {
+  border-radius: var(--radius);
+}
+
+.mpris-button {
+  color: var(--text);
+}
+
+/* скрытие скроллбара и градиентов прокрутки */
+scrollbar,
+scrollbar.vertical,
+scrollbar trough,
+scrollbar slider,
+scrolledwindow scrollbar {
+  background: transparent;
+  min-width: 0;
+  width: 0;
+  border: none;
+}
+
+scrolledwindow undershoot.top,
+scrolledwindow undershoot.bottom,
+scrolledwindow overshoot.top,
+scrolledwindow overshoot.bottom {
+  background: none;
+  background-image: none;
+  border: none;
+}
