@@ -1,1 +1,5 @@
 [Added Associations]
+
+[Default Applications]
+inode/directory=nemo.desktop
+x-scheme-handler/file=thunar.desktop

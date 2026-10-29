@@ -56,8 +56,8 @@
   background: rgba(26, 27, 38, var(--cc-bg-alpha));
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 10px;
-  margin: 4px 6px 0 0;
+  padding: 0px;
+  margin: 4px 6px;
 }
 
 .control-center-list-placeholder {
@@ -83,11 +83,14 @@
 
 .summary {
   font-weight: bold;
-  color: var(--text);
+  color: var(--text); 
+  margin : 0 0 5px 0; 
 }
 
 .time {
   color: var(--text-dim);
+  padding : 0px;  
+  margin : 0px; 
 }
 
 .body {
@@ -98,6 +101,8 @@
   border-radius: 8px;
   background: var(--bg-widget);
   color: var(--text);
+padding : 0 ; 
+margin : -6px 0 0 0 ; 
 }
 
 .notification-action > button {
@@ -135,19 +140,23 @@
 
 /* ---------- 6. ВИДЖЕТЫ ПАНЕЛИ ---------- */
 .widget {
-  padding: 6px;
-  border-radius: var(--radius);
+   border-radius: var(--radius);
+   margin : 0 ; 
+   padding : 0 ; 
 }
 
 .widget-title {
   color: var(--text);
-  font-size: 1.2em;
+  font-size: 1em;
+  margin: 20px 0px 0px 0px ; 
+  padding  :  3px 20px ; 
 }
 
 .widget-title > button {
   border-radius: 8px;
-  background: var(--bg-widget);
-  color: var(--text);
+background:  var(--bg-widget);
+  color: var(--text)
+
 }
 
 /* ---------- 7. ПЛЕЕР (MPRIS) ---------- */
@@ -155,7 +164,7 @@
 .widget-mpris * {
   border-radius: var(--radius);
   box-shadow: none;
-  text-shadow: none;
+  text-shadow: none; 
 }
 
 .widget-mpris-player {
@@ -169,6 +178,15 @@
 .mpris-button {
   color: var(--text);
 }
+
+
+
+
+
+
+
+
+
 
 /* скрытие скроллбара и градиентов прокрутки */
 scrollbar,

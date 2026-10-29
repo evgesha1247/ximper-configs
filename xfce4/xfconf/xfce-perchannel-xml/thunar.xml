@@ -1,0 +1,48 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="thunar" version="1.0">
+  <property name="last-view" type="string" value="ThunarIconView"/>
+  <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
+  <property name="last-window-maximized" type="bool" value="true"/>
+  <property name="last-statusbar-visible" type="bool" value="false"/>
+  <property name="misc-highlighting-enabled" type="bool" value="false"/>
+  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_75_PERCENT"/>
+  <property name="terminal-height" type="int" value="901"/>
+  <property name="last-separator-position" type="int" value="177"/>
+  <property name="misc-single-click" type="bool" value="false"/>
+  <property name="misc-use-csd" type="bool" value="true"/>
+  <property name="misc-change-window-icon" type="bool" value="true"/>
+  <property name="misc-date-style" type="string" value="THUNAR_DATE_STYLE_SHORT"/>
+  <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
+  <property name="shortcuts-icon-emblems" type="bool" value="true"/>
+  <property name="shortcuts-disk-space-usage-bar" type="bool" value="true"/>
+  <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
+  <property name="misc-symbolic-icons-in-sidepane" type="bool" value="true"/>
+  <property name="last-menubar-visible" type="bool" value="false"/>
+  <property name="last-toolbar-items" type="string" value="menu:1,back:0,forward:0,open-parent:0,open-home:0,new-tab:0,new-window:0,toggle-split-view:0,undo:0,redo:0,zoom-out:0,zoom-in:0,zoom-reset:0,view-as-icons:0,view-as-detailed-list:0,view-as-compact-list:0,view-switcher:0,show-hidden:0,location-bar:1,reload:0,search:1,uca-action-1793226945064575-1:0"/>
+  <property name="misc-symbolic-icons-in-toolbar" type="bool" value="false"/>
+  <property name="last-restore-tabs" type="bool" value="true"/>
+  <property name="last-details-view-fixed-columns" type="bool" value="true"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,1120,50,50,50,50,50,1137,50,50,85,50,157"/>
+  <property name="last-tabs-left" type="array">
+    <value type="string" value="file:///home/evg"/>
+  </property>
+  <property name="last-focused-tab-left" type="int" value="0"/>
+  <property name="last-focused-tab-right" type="int" value="0"/>
+  <property name="hidden-bookmarks" type="array">
+    <value type="string" value="network:///"/>
+    <value type="string" value="file:///home/evg/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE"/>
+    <value type="string" value="file:///home/evg/%D0%9C%D1%83%D0%B7%D1%8B%D0%BA%D0%B0"/>
+    <value type="string" value="file:///home/evg/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB"/>
+    <value type="string" value="recent:///"/>
+    <value type="string" value="file:///home/evg/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B"/>
+    <value type="string" value="file:///home/evg/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8"/>
+    <value type="string" value="computer:///"/>
+    <value type="string" value="file:///home/evg/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F"/>
+  </property>
+  <property name="misc-expandable-folders" type="bool" value="false"/>
+  <property name="last-show-hidden" type="bool" value="true"/>
+  <property name="last-sort-column" type="string" value="THUNAR_COLUMN_TYPE"/>
+  <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
+  <property name="misc-folders-first" type="bool" value="false"/>
+</channel>

@@ -1,0 +1,23 @@
+window {
+    background-color: rgba(26, 27, 38, 0.75);
+}
+#body {
+    font-size: 15px;
+    color: #a9b1d6;
+}
+#unlock-box {
+    background-color: rgba(26, 27, 38, 0.55);
+    border-radius: 12px;
+    padding: 20px;
+}
+entry {
+    background-color: rgba(30, 32, 48, 0.9);
+    color: #c0caf5;
+    border: 1px solid rgba(122, 162, 247, 0.4);
+    border-radius: 8px;
+}
+#unlock-button {
+    background-color: rgba(122, 162, 247, 0.85);
+    color: #1a1b26;
+    border-radius: 8px;
+}

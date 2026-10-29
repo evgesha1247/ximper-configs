@@ -53,10 +53,9 @@
     }
   },
   "widgets": [
-    "inhibitors",
-    "title",
-    "mpris",
-    "notifications"
+   "mpris",
+   "title",
+   "notifications"
   ],
   "widget-config": {
     "notifications": {
@@ -80,10 +79,12 @@
       "text": "Label Text"
     },
     "mpris": {
-      "blacklist": [],
-      "autohide": false,
-      "show-album-art": "always",
-      "loop-carousel": false
+        "image-size": 100,
+        "image-radius": 8,
+        "blacklist": ["playerctld"],
+        "autohide": true,
+        "show-album-art": "when-playing",
+        "loop-carousel": false
     },
     "buttons-grid": {
       "buttons-per-row": 7,

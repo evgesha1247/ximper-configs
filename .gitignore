@@ -33,3 +33,4 @@ goa-1.0/
 procps/
 kate/lspclient/
 ranger/plugins/
+hypr/scripts/*.log
